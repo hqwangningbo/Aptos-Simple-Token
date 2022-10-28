@@ -1,0 +1,16 @@
+[package]
+name = 'simple_token'
+version = '1.0.0'
+[dependencies.AptosFramework]
+git = 'https://github.com/aptos-labs/aptos-core.git'
+rev = 'main'
+subdir = 'aptos-move/framework/aptos-framework'
+
+[dependencies.AptosToken]
+git = 'https://github.com/aptos-labs/aptos-core.git'
+rev = 'main'
+subdir = 'aptos-move/framework/aptos-token'
+
+[addresses]
+my_address = "0x36cf204b5594508e71cfcf77718cbf64ddeea04c03680c6dacc6e641291a26ab"
+fee_receiver = "0xafa14f6a40838a5891788dd441d49531bd94b0d1da0ec79d3153d921d8611464"
