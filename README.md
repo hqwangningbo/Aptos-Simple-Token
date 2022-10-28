@@ -79,6 +79,8 @@ token.move
       ```
 
 发行NFT案例
+
+https://github.com/hqwangningbo/Aptos-Simple-Token/blob/main/simple_token/sources/NFTIssue.move
 ```rust
 struct MintingNFT has key {
         minter_cap:SignerCapability,
