@@ -15,8 +15,8 @@ module my_address::SimpleToken{
         value:table::Table<String,String>
     }
 
-    #[test(sender=@my_address)]
-    fun table_test(sender:&signer){
+    #[test]
+    fun table_test(){
         let table = table::new<String,String>();
         table::add(&mut table,string::utf8(b"name"),string::utf8(b"nb"));
         table::add(&mut table,string::utf8(b"address"),string::utf8(b"house"));
@@ -30,9 +30,7 @@ module my_address::SimpleToken{
         table::upsert(&mut table,string::utf8(b"address"),string::utf8(b"house"));
         assert!(table::contains(&table,string::utf8(b"address")),0);
 
-        move_to(sender,TableHolder{
-            value:table
-        });
+        table::drop_unchecked(table);
     }
 
     #[test]
